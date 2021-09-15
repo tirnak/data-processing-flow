@@ -1,0 +1,18 @@
+version: "3"
+services:
+  custom-snakemake:
+    build: .
+    container_name: custom-snakemake
+    working_dir: /mnt/data
+    volumes:
+      - $PWD:/mnt/data
+
+  panoptes:
+    build:
+      context: panoptes
+      dockerfile: Dockerfile
+    container_name: panoptes
+    restart: unless-stopped
+    command: panoptes
+    ports:
+      - 8000:5000

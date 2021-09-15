@@ -87,3 +87,9 @@ Provided as an argument on a startup:
 - Add linter
 - Set up CI job
 
+### Project set up
+Set up panoptes
+`$ git clone git@github.com-tirnak:panoptes-organization/panoptes.git`
+Start docker containers
+`$ docker-compose up --build -d `
+The jobs will run every minute. The run result can be found at http://localhost:8000/

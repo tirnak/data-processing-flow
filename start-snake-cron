@@ -1,0 +1,2 @@
+PATH=/opt/conda/envs/snakemake/bin:/opt/conda/condabin:/opt/conda/envs/snakemake/bin:/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+* * * * * cd /mnt/data && snakemake --cores all --wms-monitor http://panoptes:5000 >> /var/log/cron.log 2>&1
