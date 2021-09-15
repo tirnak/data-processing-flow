@@ -79,3 +79,10 @@ Provided as an argument on a startup:
 
 - add crontab to the dockerfile
 - add "panoptes" server for the visualization
+
+#### Future improvements
+- Add tests for python scripts
+- Use named parameters for script args
+- Add linter
+- Set up CI job
+
