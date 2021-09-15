@@ -23,15 +23,16 @@ Third Job
 Script outside of the flow
 - saves merged file to a fictive database.
 
-### Non-functional requirements
+### Non-funcitonal requirements
 - Panda is expected to be used (DataFrame)
 - Python is to be used.
 
 ### TBC (Assumptions)
-- if file is generated in target processing folder - job is in "successful" status
+- if file is generated in target processing folder - job is in "succcessful" status
 - if job hasn't run yet - job is in "preliminary" status
 - if job has run, but there is no file target processing folder - job is in "error" status
 - When merging time_started generated for File A and File B, the earliest of the two will be taken
+- The data in the input file is always valid, there is only one sheet per file
 
 ### TBA (Decisions)
 - Docker should be used to have a cleaner installation and not to deal with dependency versions conflict
@@ -41,6 +42,8 @@ Script outside of the flow
 - Regular job triggering can be done via crontab within resulting docker image
 - Out of MVP scope: cleaning of input/intermediate/output files
 - The interval to rerun the job will be 1 minute. As the minimum interval, supported by crontab.
+- For the MVP, Python3 will be used. Type checks, format checks, unit testing is out of MPV.
+- Minimum validation will be done for the MVP
 
 #### project Configuration
 Would consist of the following entries:
