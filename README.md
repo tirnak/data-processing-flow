@@ -82,6 +82,7 @@ Provided as an argument on a startup:
 - add "panoptes" server for the visualization
 
 #### Future improvements
+- only happy path is checked. Identify and check fail scenarios
 - Add tests for python scripts
 - Use named parameters for script args
 - Add linter
