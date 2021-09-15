@@ -13,10 +13,12 @@ Processing folder - folder, used by jobs either to get input (source) or to stor
 
 #### Jobs functionality
 First Job
-- adds to each row a timestamp for start of the processing
+- adds to each row a timestamp for start of the processing 
+
 Second Job
 - calculates mean of values in "nav" column
 - adds to each row a z-score, based on "nav" column value and calculated mean
+
 Third Job
 - merges file A and file B on "isin" column
 
@@ -89,8 +91,8 @@ Provided as an argument on a startup:
 - Set up CI job
 
 ### Project set up
-Set up panoptes
-`$ git clone git@github.com-tirnak:panoptes-organization/panoptes.git`
-Start docker containers
-`$ docker-compose up --build -d `
-The jobs will run every minute. The run result can be found at http://localhost:8000/
+Set up panoptes  
+`$ git clone git@github.com-tirnak:panoptes-organization/panoptes.git`  
+Start docker containers  
+`$ docker-compose up --build -d `  
+The jobs will run every minute. The run result can be found at http://localhost:8000/  
