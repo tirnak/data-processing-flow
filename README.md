@@ -46,6 +46,7 @@ Script outside of the flow
 - The interval to rerun the job will be 1 minute. As the minimum interval, supported by crontab.
 - For the MVP, Python3 will be used. Type checks, format checks, unit testing is out of MPV.
 - Minimum validation will be done for the MVP
+- Linux specific. Cross-platform libs won't be used in MVP
 
 #### project Configuration
 Would consist of the following entries:

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-rm target_timestamps/* target_z_score/* target_merged/*
+rm target_timestamps/* target_z_score/* target_merged/* target_success/* 
