@@ -33,13 +33,15 @@ Script outside of the flow
 - if job has run, but there is no file target processing folder - job is in "error" status
 - When merging time_started generated for File A and File B, the earliest of the two will be taken
 - The data in the input file is always valid, there is only one sheet per file
+- It is fine to rerun any of the jobs once a minute. I.e. the jobs and input data is relatively lightweight
+- Files can be preprocessed, so that they don't contain spaces
 
 ### TBA (Decisions)
 - Docker should be used to have a cleaner installation and not to deal with dependency versions conflict
 - In MVP logging in jobs will be done to stdout/stderr for simplicity. And then exposed via `docker logs [CONTAINER_NAME]`.
 - For flow control, Snakemake could be used. With implicit dependency for the simplicity.
 - There is no sense to create full-blown service, so the "Service1/2/3" will be just python scripts in MVP
-- Regular job triggering can be done via crontab within resulting docker image
+- A regular job triggering can be done via crontab within resulting docker image
 - Out of MVP scope: cleaning of input/intermediate/output files
 - The interval to rerun the job will be 1 minute. As the minimum interval, supported by crontab.
 - For the MVP, Python3 will be used. Type checks, format checks, unit testing is out of MPV.
@@ -76,3 +78,4 @@ Provided as an argument on a startup:
 - write docker-compose file to provide mounted directory
 
 - add crontab to the dockerfile
+- add "panoptes" server for the visualization
